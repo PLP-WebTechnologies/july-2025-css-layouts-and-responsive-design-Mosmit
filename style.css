@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+}
+
+/* Flexbox Navbar */
+.navbar {
+  margin-top: 15px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Main + Sidebar */
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Main Content & Sidebar */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.sidebar {
+  background: #e6f0ff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Flexbox Research Cards */
+.research-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.research-card {
+  flex: 1;
+  min-width: 200px;
+  background: #f0f8ff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* Footer */
+.site-footer {
+  background: #00264d;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ===================== Responsive Design ===================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack sidebar below */
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .site-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .research-list {
+    flex-direction: column;
+  }
+}
